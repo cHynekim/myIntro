@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hywu_likeLion_FE_1</title>
+    <link href="./김채현_FE_3w.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="title">
+                <h1>THE CHAIHYUN TIMES</h1>
+            </div>
+        </header>
+        <main>
+            <div id="subtitle"><span>Who is she?</span></div>
+            <div id="contents">
+                <section class="left">
+                    <!--only img though i want to insert some comments zz-->
+                    <div class="frame"> <!--show, overflow attribute-->
+                        <img src="1.jpg" alt="itsme1">
+                        <img src="2.jpg" alt="itsme2">
+                        <img src="3.jpg" alt="itsme3">
+                        <img src="4.jpg" alt="itsme4">
+                        <img src="5.jpg" alt="itsme5">
+                        <img src="6.jpg" alt="itsme6">
+                        <img src="7.jpg" alt="itsme7">
+                    </div>
+                    <p>
+                        첫번째 사진은 가고 싶었던 익선동 카페에서 찍은 거,
+                        두번째 사진은 휘닉스파크에서 찍힌 나. 저 날 눈 ㄹㅇ 안좋았음
+                        세번째 사진은 얼마 전에 다일이가 해운대에서 찍어준 나
+                        네번째 사진은 먼저 내려와서 동아리 사람들 기다리며 숨 돌리는데 간지난다고 찍어준 나
+                        다섯번째는 펜타포트 락페. 올해도 가야지 Rock n' roll.
+                        여섯째 사진, 부산 국제 락페스티벌에서 예쁜 노을이랑 함께!
+                        마지막은 성수 타임 애프터 타임에서 찍은 컨셉샷이다.
+                    </p>
+                </section>
+                <section class="center">
+                    <!--text &img, p tag-->
+                </section>
+                <section class="right">
+                    <p>일단은이렇게만들긴했는데뭐라고써야할지를모르겠네요안녕하세요김채현입니다</p>
+                </section>
+                <aside class="bot_quiz">
+                    <span class="que">☑️채현이가 좋아하는 음식은?</span>
+                    <label>곱창&nbsp;<input type="radio" name="food"></label>
+                    <label>라멘&nbsp;<input type="radio" name="food" checked></label>
+                    <label>마라탕&nbsp;<input type="radio" name="food"></label>
+                    <label>샤브샤브&nbsp;<input type="radio" name="food"></label>
+                    <form action="helloWorld" method="post">
+                        <label for="answer">정답여부 :</label>
+                        <input id="answer" type="text">
+                        <input type="submit">
+                    </form>
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <div class="sns">
+                <ul>
+                    <li class="blog">
+                        <a href="https://blog.naver.com/liaco819" target="_blank">
+                            <img src="https://play-lh.googleusercontent.com/NMaV7YqpGLsUHf3drTmT3sfQ2XmFdP7-DyW9vG3AkSWyRv3GWEu9BiRk1jWE1F1ojbA" alt="blog">
+                        </a>
+                    </li>
+                    <li class="insta">
+                        <a href="https://instagram.com/war1.74?igshid=YmMyMTA2M2Y=" target="_blank">
+                            <img src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-png-instagram-logo-camel-productions-website-25.png" alt="insta">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let stack = 0;
+        let imglist = document.querySelectorAll('.left img');
+        // console.log(imglist);
+        fade();
+        function fade(){
+            setInterval(function(){
+                if(stack < 7){
+                    imglist[stack].style.zIndex += 1;
+                    stack++;
+                }
+                else{
+                    stack = 0;
+                }
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
